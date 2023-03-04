@@ -35,18 +35,18 @@ int tree_is_complete(const binary_tree_t *tree, int i, int node_count)
 
 
 /**
- *  * binary_tree_is_complete - calls to tree_is_complete function
- *   * @tree: pointer to the root node of the tree
- *    * Return: 1 if tree is complete, 0 otherwise
- *     */
+ * binary_tree_is_complete - calls to tree_is_complete function
+ * @tree: pointer to the root node of the tree
+ * Return: 1 if tree is complete, 0 otherwise
+ */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
-		size_t node_count;
+	size_t node_count;
 
-			if (tree == NULL)
-						return (0);
+	if (tree == NULL)
+		return (0);
 
-				node_count = binary_tree_size(tree);
+	node_count = binary_tree_size(tree);
 
-		return (tree_is_complete(tree, 0, node_count));
+	return (tree_is_complete(tree, 0, node_count));
 }
